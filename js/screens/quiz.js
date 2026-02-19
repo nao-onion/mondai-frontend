@@ -118,19 +118,23 @@ const QuizScreen = (() => {
     }
 
     function handleAnswer(container, entered) {
-        clearInterval(timerInterval);
-        const elapsedMs = Math.round(performance.now() - questionStartTime);
         const q = questions[currentIndex];
 
         // 正解判定（大文字小文字・前後空白を無視）
         const isCorrect = normalizeAnswer(entered) === normalizeAnswer(q.answer);
 
-        answers.push({
-            questionId: q.id,
-            entered,
-            isCorrect,
-            elapsedMs: Math.max(1, Math.min(elapsedMs, 1_800_000)),
-        });
+        if (isCorrect) {
+            // 正解時のみタイマー停止＆回答記録
+            clearInterval(timerInterval);
+            const elapsedMs = Math.round(performance.now() - questionStartTime);
+
+            answers.push({
+                questionId: q.id,
+                entered,
+                isCorrect,
+                elapsedMs: Math.max(1, Math.min(elapsedMs, 1_800_000)),
+            });
+        }
 
         // フィードバック表示
         showFeedback(container, isCorrect, q.answer);
@@ -148,25 +152,40 @@ const QuizScreen = (() => {
         emoji.textContent = isCorrect ? '⭕' : '❌';
         document.body.appendChild(emoji);
 
-        // 不正解時は正解を一瞬表示
-        if (!isCorrect) {
-            const input = document.getElementById('answer-input');
+        const input = document.getElementById('answer-input');
+
+        if (isCorrect) {
+            // 正解 → 次の問題へ
             if (input) {
-                input.value = `正解: ${correctAnswer}`;
-                input.style.color = 'var(--danger)';
                 input.disabled = true;
             }
-        }
-
-        setTimeout(() => {
-            emoji.remove();
-            currentIndex++;
-            if (currentIndex < questions.length) {
-                renderQuestion(container);
-            } else {
-                finishQuiz(container);
+            setTimeout(() => {
+                emoji.remove();
+                currentIndex++;
+                if (currentIndex < questions.length) {
+                    renderQuestion(container);
+                } else {
+                    finishQuiz(container);
+                }
+            }, 600);
+        } else {
+            // 不正解 → 同じ問題に留まる（入力クリアしてリトライ）
+            if (input) {
+                input.value = '';
+                input.style.animation = 'shake 0.4s ease';
+                setTimeout(() => {
+                    input.style.animation = '';
+                    input.focus();
+                }, 400);
             }
-        }, isCorrect ? 600 : 1200);
+            // カードのフィードバックをリセット
+            setTimeout(() => {
+                emoji.remove();
+                if (card) {
+                    card.classList.remove('incorrect');
+                }
+            }, 600);
+        }
     }
 
     function finishQuiz(container) {

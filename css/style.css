@@ -152,8 +152,15 @@ body::before {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { filter: drop-shadow(0 0 8px var(--accent-glow)); }
-  50% { filter: drop-shadow(0 0 16px var(--accent-glow)); }
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 16px var(--accent-glow));
+  }
 }
 
 /* --- Screen Container --- */
@@ -186,7 +193,9 @@ body::before {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* --- Screen Transitions --- */
@@ -199,6 +208,7 @@ body::before {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -429,13 +439,27 @@ body::before {
 }
 
 @keyframes flash-correct {
-  0% { border-color: var(--success); box-shadow: 0 0 30px var(--success-glow); }
-  100% { border-color: var(--border-subtle); box-shadow: none; }
+  0% {
+    border-color: var(--success);
+    box-shadow: 0 0 30px var(--success-glow);
+  }
+
+  100% {
+    border-color: var(--border-subtle);
+    box-shadow: none;
+  }
 }
 
 @keyframes flash-incorrect {
-  0% { border-color: var(--danger); box-shadow: 0 0 30px var(--danger-glow); }
-  100% { border-color: var(--border-subtle); box-shadow: none; }
+  0% {
+    border-color: var(--danger);
+    box-shadow: 0 0 30px var(--danger-glow);
+  }
+
+  100% {
+    border-color: var(--border-subtle);
+    box-shadow: none;
+  }
 }
 
 .feedback-overlay {
@@ -451,9 +475,44 @@ body::before {
 }
 
 @keyframes feedback-pop {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-  30% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
-  100% { opacity: 0; transform: translate(-50%, -60%) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(1);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-8px);
+  }
+
+  40% {
+    transform: translateX(8px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
 }
 
 /* ============================================
