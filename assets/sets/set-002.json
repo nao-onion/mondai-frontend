@@ -1,0 +1,37 @@
+{
+    "id": "set-002",
+    "title": "漢字読み方チャレンジ",
+    "version": 1,
+    "questions": [
+        {
+            "id": "q1",
+            "text": "「薔薇」の読み方は？",
+            "answer": "ばら",
+            "image": null
+        },
+        {
+            "id": "q2",
+            "text": "「憂鬱」の読み方は？",
+            "answer": "ゆううつ",
+            "image": null
+        },
+        {
+            "id": "q3",
+            "text": "「林檎」の読み方は？",
+            "answer": "りんご",
+            "image": null
+        },
+        {
+            "id": "q4",
+            "text": "「蒲公英」の読み方は？",
+            "answer": "たんぽぽ",
+            "image": null
+        },
+        {
+            "id": "q5",
+            "text": "「向日葵」の読み方は？",
+            "answer": "ひまわり",
+            "image": null
+        }
+    ]
+}

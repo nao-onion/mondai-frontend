@@ -1,0 +1,20 @@
+[
+    {
+        "id": "set-001",
+        "title": "一般常識クイズ",
+        "description": "日本の地理、文化、科学など幅広い分野から出題。基本的な知識を試そう！",
+        "icon": "🌏",
+        "questionCount": 5,
+        "version": 1,
+        "file": "set-001.json"
+    },
+    {
+        "id": "set-002",
+        "title": "漢字読み方チャレンジ",
+        "description": "難読漢字の読み方を当てよう。日本語力が試される！",
+        "icon": "📖",
+        "questionCount": 5,
+        "version": 1,
+        "file": "set-002.json"
+    }
+]

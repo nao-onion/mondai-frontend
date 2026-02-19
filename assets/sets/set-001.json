@@ -1,0 +1,37 @@
+{
+    "id": "set-001",
+    "title": "一般常識クイズ",
+    "version": 1,
+    "questions": [
+        {
+            "id": "q1",
+            "text": "日本で一番高い山は？",
+            "answer": "富士山",
+            "image": null
+        },
+        {
+            "id": "q2",
+            "text": "日本の首都は？",
+            "answer": "東京",
+            "image": null
+        },
+        {
+            "id": "q3",
+            "text": "水の化学式は？",
+            "answer": "H2O",
+            "image": null
+        },
+        {
+            "id": "q4",
+            "text": "太陽系で一番大きい惑星は？",
+            "answer": "木星",
+            "image": null
+        },
+        {
+            "id": "q5",
+            "text": "「吾輩は猫である」の作者は？",
+            "answer": "夏目漱石",
+            "image": null
+        }
+    ]
+}
