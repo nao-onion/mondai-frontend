@@ -3,8 +3,8 @@
  * バックエンドとの通信を管理
  */
 const MondaiAPI = (() => {
-    // API Base URL — デプロイ時に実際のWorkerドメインに変更
-    const API_BASE = 'https://mondai-api.your-worker.workers.dev';
+    // API Base URL — Cloudflare Workers
+    const API_BASE = 'https://mondai-backend.nao-onion.workers.dev';
 
     /**
      * 結果を送信し、集計データを取得
