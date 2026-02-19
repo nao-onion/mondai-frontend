@@ -4,7 +4,7 @@
  */
 const MondaiAPI = (() => {
     // API Base URL — Cloudflare Workers
-    const API_BASE = 'https://mondai-backend.nao-onion.workers.dev';
+    const API_BASE = 'https://mondai-backend.manene-usohachi.workers.dev';
 
     /**
      * 結果を送信し、集計データを取得
