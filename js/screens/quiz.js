@@ -120,8 +120,9 @@ const QuizScreen = (() => {
     function handleAnswer(container, entered) {
         const q = questions[currentIndex];
 
-        // 正解判定（大文字小文字・前後空白を無視）
-        const isCorrect = normalizeAnswer(entered) === normalizeAnswer(q.answer);
+        // 正解判定（大文字小文字・前後空白を無視、配列なら複数候補に対応）
+        const acceptedAnswers = Array.isArray(q.answer) ? q.answer : [q.answer];
+        const isCorrect = acceptedAnswers.some(a => normalizeAnswer(entered) === normalizeAnswer(a));
 
         if (isCorrect) {
             // 正解時のみタイマー停止＆回答記録

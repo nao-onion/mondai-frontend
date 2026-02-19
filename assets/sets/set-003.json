@@ -1,0 +1,54 @@
+{
+    "id": "set-002",
+    "title": "漢字読み方チャレンジ",
+    "version": 1,
+    "questions": [
+        {
+            "id": "q1",
+            "text": "答えは？",
+            "answer": [
+                "れいく",
+                "レイク"
+            ],
+            "image": "assets/sets/images/set1/Q1.jpg"
+        },
+        {
+            "id": "q2",
+            "text": "答えは？",
+            "answer": [
+                "NET",
+                "ネット",
+                "ねっと"
+            ],
+            "image": "assets/sets/images/set1/Q2.jpg"
+        },
+        {
+            "id": "q3",
+            "text": "答えは？",
+            "answer": [
+                "HOST",
+                "ホスト",
+                "ほすと"
+            ],
+            "image": "assets/sets/images/set1/Q3.jpg"
+        },
+        {
+            "id": "q4",
+            "text": "答えは？",
+            "answer": [
+                "たんび",
+                "タンビ"
+            ],
+            "image": "assets/sets/images/set1/Q4.jpg"
+        },
+        {
+            "id": "q5",
+            "text": "答えは？",
+            "answer": [
+                "くじ",
+                "クジ"
+            ],
+            "image": "assets/sets/images/set1/Q5.jpg"
+        }
+    ]
+}

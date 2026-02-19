@@ -16,5 +16,14 @@
         "questionCount": 5,
         "version": 1,
         "file": "set-002.json"
+    },
+    {
+        "id": "set-003",
+        "title": "謎解き",
+        "description": "テストだよ",
+        "icon": "🔍",
+        "questionCount": 5,
+        "version": 1,
+        "file": "set-003.json"
     }
 ]
